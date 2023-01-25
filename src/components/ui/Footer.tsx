@@ -7,7 +7,7 @@ import Store from '../../store/Index';
 import { FooterData } from '../../shared/models/FooterData.model';
 import uuid from 'react-uuid';
 
-function Footer() {
+function Footer(props: {isMobile: boolean}) {
   const dispatch = useDispatch();
   const [footerData, setFooterData] = useState<FooterData>();
 
@@ -27,25 +27,50 @@ function Footer() {
   }, []);
   
   return (
-    <FooterStyled>
-      <div className="vision-r__footer">
-        <div className="vision-r__footer__logo">
-          <img src={logo} alt="logo"/>
-        </div>
-        {footerData?.adresses.map(adress => (
-          <div key={uuid()} className="vision-r__footer__adress">
-            <span className="vision-r__footer__adress__city">{adress.city}</span>
-            <span className="vision-r__footer__adress__location">{adress.location}</span>
-            <span className="vision-r__footer__adress__zipcode">{adress.zipcode}</span>
+    props.isMobile ?
+      <FooterStyled>
+        <div className="vision-r-mobile__footer">
+          <div className="vision-r-mobile__footer__logo">
+            <img src={logo} alt="logo"/>
           </div>
-        ))}
-        <div className="vision-r__footer__contact">
-          <span className="vision-r__footer__contact__title">Nous contacter</span>
-          <span className="vision-r__footer__contact__phone">{footerData?.contact.phone}</span>
-          <span className="vision-r__footer__contact__email">{footerData?.contact.email}</span>
+          {footerData?.adresses.map(adress => (
+            <div key={uuid()} className="vision-r-mobile__footer__adress">
+              <span className="vision-r-mobile__footer__adress__city">{adress.city}</span>
+              <br/>
+              <span className="vision-r-mobile__footer__adress__location">{adress.location}</span>
+              <br/>
+              <span className="vision-r-mobile__footer__adress__zipcode">{adress.zipcode}</span>
+            </div>
+          ))}
+          <div className="vision-r-mobile__footer__contact">
+            <span className="vision-r-mobile__footer__contact__title">Nous contacter</span>
+            <br/>
+            <span className="vision-r-mobile__footer__contact__phone">{footerData?.contact.phone}</span>
+            <br/>
+            <span className="vision-r-mobile__footer__contact__email">{footerData?.contact.email}</span>
+          </div>
         </div>
-      </div>
-    </FooterStyled>
+      </FooterStyled>
+    :
+      <FooterStyled>
+        <div className="vision-r-desktop__footer">
+          <div className="vision-r-desktop__footer__logo">
+            <img src={logo} alt="logo"/>
+          </div>
+          {footerData?.adresses.map(adress => (
+            <div key={uuid()} className="vision-r-desktop__footer__adress">
+              <span className="vision-r-desktop__footer__adress__city">{adress.city}</span>
+              <span className="vision-r-desktop__footer__adress__location">{adress.location}</span>
+              <span className="vision-r-desktop__footer__adress__zipcode">{adress.zipcode}</span>
+            </div>
+          ))}
+          <div className="vision-r-desktop__footer-desktop__contact">
+            <span className="vision-r-desktop__footer__contact__title">Nous contacter</span>
+            <span className="vision-r-desktop__footer__contact__phone">{footerData?.contact.phone}</span>
+            <span className="vision-r-desktop__footer__contact__email">{footerData?.contact.email}</span>
+          </div>
+        </div>
+      </FooterStyled>
   )
 }
 
