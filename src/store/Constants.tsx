@@ -1,2 +1,2 @@
-export const LOAD_BODY_DATA = "LOAD_BODY_DATA";
+export const LOAD_LANDING_DATA = "LOAD_LANDING_DATA";
 export const LOAD_FOOTER_DATA = "LOAD_FOOTER_DATA";
