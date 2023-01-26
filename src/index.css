@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.vision-r-desktop__buy-popup__modal {
+  background: #ffffff !important;
+  width: 910px;
+  height: 538px;
+  padding: 80px 105px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-color: transparent !important;
+  box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 4px !important;
+}
+.vision-r-desktop__buy-popup__modal h2 {
+  margin: 25px auto 0 auto;
+  height: 60px;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+  color: #18181B;
+}
+.vision-r-desktop__buy-popup__modal span {
+  margin: 25px auto 0 auto;
+  width: 595px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+  color: #18181B;
+}

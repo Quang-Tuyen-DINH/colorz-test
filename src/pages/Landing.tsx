@@ -17,6 +17,7 @@ import lowerImage from "../assets/Rectangle 29.png";
 import accessorImg1 from "../assets/Product_1 2.png";
 import accessorImg2 from "../assets/Product_1 1.png";
 import accessorImg3 from "../assets/Product_1 3.png";
+import BuyPopup from '../features/BuyPopup';
 
 function Landing(props: {isMobile: boolean}) {
   const dispatch = useDispatch();
@@ -161,7 +162,8 @@ function Landing(props: {isMobile: boolean}) {
         </div>
         <div className="vision-r-desktop__landing__body">
           <span className="vision-r-desktop__landing__body__text">{landingData?.body.text}</span>
-          <button className="vision-r-desktop__landing__body__button">Buy it now</button>
+          {/* <button className="vision-r-desktop__landing__body__button">Buy it now</button> */}
+          <BuyPopup />
           <div className="vision-r-desktop__landing__body__carousel">
             <Carousel
               autoPlay
