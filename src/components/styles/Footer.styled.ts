@@ -57,6 +57,13 @@ export const FooterStyled = styled.div`
         line-height: 24px;
       }
     }
+    &__earth {
+      margin: 30px 0 0 0;
+      img {
+        height: 66px;
+        width: 73px;
+      }
+    }
   }
   .vision-r-desktop__footer {
   }

@@ -6,6 +6,8 @@ export const LandingStyled = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     &__upper {
+      height: 899px;
+      overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -23,6 +25,7 @@ export const LandingStyled = styled.div`
         margin: 167px 20px 0 20px;
         display: block;
         position: absolute;
+        width: 335px;
         text-align: center;
         color: #18181B;
         font-weight: 500;
@@ -32,7 +35,7 @@ export const LandingStyled = styled.div`
       &__image {
         &__sticker {
           position: absolute;
-          left: 133px;
+          right: 40px;
           top: 740px;
           &__content {
             margin: 42px 0 0 72px;
@@ -65,11 +68,11 @@ export const LandingStyled = styled.div`
             border-radius: 95px;
             background: #F0380F;
             box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
-            transform: rotate(29.91deg);
           }
         }
         img {
           height: 899px;
+          object-fit: contain;
         }
       }
     }
@@ -79,8 +82,6 @@ export const LandingStyled = styled.div`
       justify-content: center;
       &__text {
         margin: 60px 20px 0 20px;
-        width: 335px;
-        height: 306px;
         display: block;
         text-align: center;
         color: #18181B;
@@ -104,11 +105,14 @@ export const LandingStyled = styled.div`
     &__lower {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       &__image {
         img {
-          height: 440px;
+          height: auto;
+          width: 100%;
         }
+      }
+      &__icon {
+        margin: 30px 20px 0 20px;
       }
       &__title {
         margin: 30px 20px 0 20px;
@@ -134,6 +138,38 @@ export const LandingStyled = styled.div`
         font-size: 30px;
         line-height: 35px;
         text-align: center;
+      }
+      &__carousel {
+        margin: 30px 0 60px 0;
+        &__slide {
+          width: 285px;
+          height: 368px;
+          border: 1px solid #F3F3F3;
+          border-radius: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          img {
+            display: block;
+            width: 100%;
+            margin: 24px auto 0 auto;
+            height: 209px;
+            width: 209px;
+          }
+          &__title {
+            margin: 14px 26px 0 26px;
+            display: block;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 34px;
+            text-align: center;
+            color: #18181B;
+          }
+          &__price {
+            margin: 4.87px auto 24.13px auto;
+            display: block;
+          }
+        }
       }
     }
   }

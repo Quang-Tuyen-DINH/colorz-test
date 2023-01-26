@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { FooterStyled } from '../styles/Footer.styled';
-import logo from "../../assets/Logo Colorz.svg";
+import colorzLogo from "../../assets/Logo Colorz.svg";
+import earthLogo from "../../assets/earth.svg";
 import { useDispatch } from "react-redux";
 import { footerData$ } from '../../services/footer/Footer.service';
-import Store from '../../store/Index';
 import { FooterData } from '../../shared/models/FooterData.model';
+import Store from '../../store/Index';
 import uuid from 'react-uuid';
 
 function Footer(props: {isMobile: boolean}) {
@@ -31,7 +32,7 @@ function Footer(props: {isMobile: boolean}) {
       <FooterStyled>
         <div className="vision-r-mobile__footer">
           <div className="vision-r-mobile__footer__logo">
-            <img src={logo} alt="logo"/>
+            <img src={colorzLogo} alt="logo"/>
           </div>
           {footerData?.adresses.map(adress => (
             <div key={uuid()} className="vision-r-mobile__footer__adress">
@@ -49,13 +50,16 @@ function Footer(props: {isMobile: boolean}) {
             <br/>
             <span className="vision-r-mobile__footer__contact__email">{footerData?.contact.email}</span>
           </div>
+          <div className="vision-r-mobile__footer__earth">
+            <img src={earthLogo} alt="earth"/>
+          </div>
         </div>
       </FooterStyled>
     :
       <FooterStyled>
         <div className="vision-r-desktop__footer">
           <div className="vision-r-desktop__footer__logo">
-            <img src={logo} alt="logo"/>
+            <img src={colorzLogo} alt="logo"/>
           </div>
           {footerData?.adresses.map(adress => (
             <div key={uuid()} className="vision-r-desktop__footer__adress">
