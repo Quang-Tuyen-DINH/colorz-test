@@ -269,6 +269,7 @@ export const LandingStyled = styled.div`
         font-weight: 500;
         font-size: 22px;
         line-height: 34px;
+        white-space: pre-line;
       }
       &__button {
         margin: 30px 651px 90px 651px;
