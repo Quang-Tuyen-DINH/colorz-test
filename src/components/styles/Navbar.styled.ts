@@ -21,5 +21,6 @@ export const NavBarStyled = styled.div`
     }
   }
   .vision-r-desktop__nav-bar {
+    position: absolute;
   }
 `;

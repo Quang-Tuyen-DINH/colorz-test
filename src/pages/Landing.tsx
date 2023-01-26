@@ -114,21 +114,20 @@ function Landing(props: {isMobile: boolean}) {
           </div>
           <img className="vision-r-mobile__landing__lower__icon" src={lockIcon} alt="pudique-icon"/>
           <span className="vision-r-mobile__landing__lower__title">{landingData?.lower.title}</span>
-          <span className="vision-r-mobile__landing__lower__body">{landingData?.lower.body}</span>
+          <span className="vision-r-mobile__landing__lower__body">{landingData?.lower.bodyMobile}</span>
         </div>
         <div className="vision-r-mobile__landing__accessories">
           <span className="vision-r-mobile__landing__accessories__title">{landingData?.accessories.title}</span>
           <div className="vision-r-mobile__landing__accessories__carousel">
             <Carousel
               autoPlay
-              infiniteLoop
+              infiniteLoop={true}
               showThumbs={false}
               showStatus={false}
               showIndicators={false}
               showArrows={false}
               centerMode
             >
-            {/* centerSlidePercentage={100 / 3} */}
               {accessorCarousel.map(item => (
                 <div key={uuid()} className="vision-r-mobile__landing__accessories__carousel__slide">
                   <img src={item.image} alt={item.name}/>
@@ -143,7 +142,76 @@ function Landing(props: {isMobile: boolean}) {
       </LandingStyled>
     :
       <LandingStyled className="vision-r-desktop__landing">
-        <div className="vision-r-desktop__landing__title">Bienvenue</div>
+        <div className="vision-r-desktop__landing__upper">
+          <span className="vision-r-desktop__landing__upper__subTitle">{landingData?.upper.subTitle}</span>
+          <span className="vision-r-desktop__landing__upper__title">{landingData?.upper.title}</span>
+          <div className="vision-r-desktop__landing__upper__image">
+            <div className="vision-r-desktop__landing__upper__image__sticker">
+              <div className="vision-r-desktop__landing__upper__image__sticker__background"></div>
+              <div className="vision-r-desktop__landing__upper__image__sticker__content">
+                <span className="vision-r-desktop__landing__upper__image__sticker__content__title">Offre speciale</span>
+                <br/>
+                <span className="vision-r-desktop__landing__upper__image__sticker__content__price">799,99€*</span>
+                <br/>
+                <span className="vision-r-desktop__landing__upper__image__sticker__content__text">*au lieu de 1.499,99€</span>
+              </div>
+            </div>
+            <img src={heroImgDesktop} alt="hero"/>
+          </div>
+        </div>
+        <div className="vision-r-desktop__landing__body">
+          <span className="vision-r-desktop__landing__body__text">{landingData?.body.text}</span>
+          <button className="vision-r-desktop__landing__body__button">Buy it now</button>
+          <div className="vision-r-desktop__landing__body__carousel">
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showArrows={false}
+            >
+              {bodyCarousel.map(item => (
+                <div key={uuid()}>
+                  <img src={item.image} alt={item.name}/>
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+        <div className="vision-r-desktop__landing__lower">
+          <div className="vision-r-desktop__landing__lower__image">
+            <img src={lowerImage} alt="pudique"/>
+          </div>
+          <div className="vision-r-desktop__landing__lower__text">
+            <img className="vision-r-desktop__landing__lower__text__icon" src={lockIcon} alt="pudique-icon"/>
+            <span className="vision-r-desktop__landing__lower__text__title">{landingData?.lower.title}</span>
+            <span className="vision-r-desktop__landing__lower__text__body">{landingData?.lower.bodyDesktop}</span>
+          </div>
+        </div>
+        <div className="vision-r-desktop__landing__accessories">
+          <span className="vision-r-desktop__landing__accessories__title">{landingData?.accessories.title}</span>
+          <div className="vision-r-desktop__landing__accessories__carousel">
+            <Carousel
+              autoPlay
+              infiniteLoop={true}
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={false}
+              showArrows={false}
+              centerMode
+              centerSlidePercentage={100 / 3}
+            >
+              {accessorCarousel.map(item => (
+                <div key={uuid()} className="vision-r-desktop__landing__accessories__carousel__slide">
+                  <img src={item.image} alt={item.name}/>
+                  <span className="vision-r-desktop__landing__accessories__carousel__slide__title">{item.name}</span>
+                  <br/>
+                  <span className="vision-r-desktop__landing__accessories__carousel__slide__price">{item.price}</span>
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
       </LandingStyled>
   )
 }

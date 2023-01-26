@@ -13,7 +13,8 @@ const initialState = {
     },
     lower: {
       title: 'T',
-      body: "",
+      bodyMobile: "",
+      bodyDesktop: "",
       image: ""
     },
     accessories: {
