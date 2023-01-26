@@ -71,7 +71,8 @@ export const LandingStyled = styled.div`
           }
         }
         img {
-          height: 899px;
+          height: auto;
+          width: 100vw;
           object-fit: contain;
         }
       }
@@ -253,6 +254,7 @@ export const LandingStyled = styled.div`
         }
         img {
           width: 100vw;
+          height: auto;
           object-fit: contain;
         }
       }

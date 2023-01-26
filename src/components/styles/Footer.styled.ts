@@ -134,8 +134,8 @@ export const FooterStyled = styled.div`
       &__earth {
         margin: 30px 0 0 0;
         img {
-          height: 66px;
-          width: 73px;
+          height: 76px;
+          width: 85px;
         }
       }
     }
