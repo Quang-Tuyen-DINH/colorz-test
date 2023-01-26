@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const AppStyled = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  .vision-r-mobile {
+  }
+  .vision-r-desktop {
+  }
 `;

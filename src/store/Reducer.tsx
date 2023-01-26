@@ -1,7 +1,7 @@
 import * as types from "./Constants";
 
 const initialState = {
-  bodyData: {
+  landingData: {
     upper: {
       subTitle: "",
       title: "",
@@ -13,7 +13,8 @@ const initialState = {
     },
     lower: {
       title: 'T',
-      body: "",
+      bodyMobile: "",
+      bodyDesktop: "",
       image: ""
     },
     accessories: {
@@ -33,10 +34,10 @@ const initialState = {
 
 const Reducer = (state = initialState, action: any) => {
   switch(action.type) {
-    case types.LOAD_BODY_DATA:
+    case types.LOAD_LANDING_DATA:
       return {
         ...state,
-        bodyData: action.payload
+        landingData: action.payload
       };
     case types.LOAD_FOOTER_DATA:
       return {

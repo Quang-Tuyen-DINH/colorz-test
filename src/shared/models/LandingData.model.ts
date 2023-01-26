@@ -1,4 +1,4 @@
-export interface BodyData {
+export interface LandingData {
   upper: {
     subTitle: string,
     title: string,
@@ -10,7 +10,8 @@ export interface BodyData {
   }
   lower: {
     title: string,
-    body: string,
+    bodyMobile: string,
+    bodyDesktop: string,
     image: string
   }
   accessories: {
@@ -22,5 +23,5 @@ export interface BodyData {
 interface Item {
   image: string,
   name: string,
-  price: number
+  price: string
 }
